@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Formula App</title>
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    input {
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    summary h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #34495e;
+    }
+
+    p {
+      padding: 5px 0;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📘 Math Formula</h1>
+
+<!-- SEARCH BOX -->
+<input
+  type="text"
+  placeholder="🔍 Search formula..."
+  onkeyup="searchFormula()"
+  style="width:100%; padding:10px; font-size:16px; margin-bottom:20px;"
+>
+
+<!-- ARITHMETIC -->
+  <summary><h2>➕ Arithmetic</h2></summary>
+
+  <p>Addition: a + b</p>
+  <p>Subtraction: a − b</p>
+  <p>Multiplication: a × b</p>
+  <p>Division: a ÷ b</p>
+
+  <p>Percentage = (part ÷ whole) × 100</p>
+  <p>Average = sum ÷ total number</p>
+
+  <p>Speed = distance ÷ time</p>
+  <p>Distance = speed × time</p>
+  <p>Time = distance ÷ speed</p>
+
+  <p>Simple Interest = (P × R × T) ÷ 100</p>
+
+<!-- ALGEBRA -->
+  <summary><h2>📊 Algebra</h2></summary>
+
+  <p>ax + b = 0</p>
+  <p>x = −b ÷ a</p>
+
+  <p>(a + b)² = a² + 2ab + b²</p>
+  <p>(a − b)² = a² − 2ab + b²</p>
+
+  <p>a² − b² = (a − b)(a + b)</p>
+
+  <p>Quadratic Formula:
+  x = (−b ± √(b² − 4ac)) ÷ 2a</p>
+
+<!-- GEOMETRY -->
+  <summary><h2>📐 Geometry</h2></summary>
+
+  <p>Area of Square = side²</p>
+  <p>Perimeter of Square = 4 × side</p>
+
+  <p>Area of Rectangle = l × w</p>
+  <p>Perimeter of Rectangle = 2(l + w)</p>
+
+  <p>Area of Triangle = ½ × base × height</p>
+
+  <p>Area of Circle = πr²</p>
+  <p>Circumference of Circle = 2πr</p>
+  <p>Area of annulus or ring = π(R² - r²)</p>
+
+  <p>Area of sector = θ/360πr², where θ is in radians</p>
+
+  <p>Pythagoras Theorem: c² = a² + b²</p>
+
+<!-- MENSURATION -->
+  <summary><h2>📦 Mensuration</h2></summary>
+
+  <p>Volume of Cube = a³</p>
+  <p>Surface Area of Cube = 6a²</p>
+
+  <p>Volume of Cuboid = l × w × h</p>
+
+  <p>Volume of Cylinder = πr²h</p>
+
+  <p>Volume of Sphere = 4/3πr³</p>
+
+<!-- TRIGONOMETRY -->
+  <summary><h2>📐 Trigonometry</h2></summary>
+
+  <p>sinθ = opposite / hypotenuse</p>
+  <p>cosθ = adjacent / hypotenuse</p>
+  <p>tanθ = opposite / adjacent</p>
+
+  <p>sin²θ + cos²θ = 1</p>
+  <p>1 + tan²θ = sec²θ</p>
+
+<!-- STATISTICS -->
+  <summary><h2>📈 Statistics</h2></summary>
+
+  <p>Mean = Σx ÷ n</p>
+  <p>Median = middle value</p>
+  <p>Mode = most frequent value</p>
+
+  <p>Probability = favourable ÷ total outcomes</p>
+
+<!-- SEARCH SCRIPT -->
+<script>
+function searchFormula() {
+  let input = document.querySelector("input").value.toLowerCase();
+  let formulas = document.querySelectorAll("p");
+
+  formulas.forEach(f => {
+    if (f.innerText.toLowerCase().includes(input)) {
+      f.style.display = "block";
+    } else {
+      f.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
